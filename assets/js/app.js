@@ -108,7 +108,7 @@ const onClickSortedPopulation = () => {
 };
 
 
-const displayPopGraph = () => {
+const displayPopGraphTemplate = () => {
   const worldPop = countries.reduce((acc, cv) => acc + cv.population, 0);
   const topCountries = countries.sort((a, b) => b.population - a.population).slice(0, 10);
 
@@ -153,9 +153,8 @@ displayPopGraph();
 
 
 const onClickPopGraph = () => {
-  displayPopGraph();
+  displayPopGraphTemplate();
 };
-
 const onClickLangGraph = () => {
 
   const languageCountArray = [];
