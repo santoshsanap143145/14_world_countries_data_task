@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Countries Ddata Task</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header mainHeader">
+      <div class="container-fluid text-center">
+        <h2 class="priHeading">world countries data</h2>
+        <h3 class="secHeading">currently, we have 250 countries</h3>
+        <p class="comment" id="comment"></p>
+      </div>
+    </header>
+
+    <div class="controlFun">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="inputSearch"
+                placeholder="search countries by names, cities, languages"
+              />
+            </div>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <div class="sortButtons text-center d-flex justify-content-center">
+              <button type="button" class="btn btnName" id="btnName">
+                name
+                <i class="fa-solid fa-arrow-down" id="nameIcon"></i>
+              </button>
+              <button type="button" class="btn btnCap" id="btnCap">
+                capital
+                <i class="fa-solid fa-arrow-up d-none" id="capIcon"></i>
+              </button>
+              <button type="button" class="btn btnPop" id="btnPop">
+                population
+                <i class="fa-solid fa-arrow-up d-none" id="popIcon"></i>
+              </button>
+              <a href="#chartStats">
+                <i class="fa-solid fa-chart-bar chart align-self-center"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="main">
+      <div class="cardWrapper mb-4">
+        <div class="container-fluid">
+          <div class="row" id="cardContainer">
+            <!-- <div class="col-md-2">
+              <div class="card countryCard">
+                <img
+                  src="https://flagcdn.com/in.svg"
+                  class="card-img-top flag"
+                  alt="flag"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">India</h5>
+                  <p class="card-text"><span>capital: </span>New Delhi</p>
+                  <p class="card-text">
+                    <span>languages: </span>Hindi, English
+                  </p>
+                  <p class="card-text"><span>population: </span>1380004385</p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="container-fluid">
+        <div class="graphGroup">
+          <div class="graphButtons text-center">
+            <button type="button" class="popBtn" id="popBtn">population</button>
+            <button type="button" class="langBtn" id="langBtn">
+              languages
+            </button>
+          </div>
+            <h4 class="graph-title text-center mt-2" id="title">
+              
+            </h4>
+        </div>
+      </div>
+
+      <div class="graphChart" id="chartStats">
+        <div class="container" id="dataContainer">
+          <!-- <div class="row mt-2">
+            <div class="col-md-2">
+             <h5>world</h5>
+            </div>
+            <div class="col-md-8">
+              <div class="bar">
+                <div class="percentage"></div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <h5>7,693,165,599</h5>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </main>
+
+    <script src="./assets/js/countries.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
