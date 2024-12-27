@@ -149,7 +149,7 @@ const displayPopGraphTemplate = () => {
   dataContainer.innerHTML = result;
   title.innerHTML = `10 Most Populated Countries in the World`;
 };
-displayPopGraph();
+displayPopGraphTemplate();
 
 
 const onClickPopGraph = () => {
@@ -188,8 +188,6 @@ const onClickLangGraph = () => {
                     <h5>${obj.count}</h5>
                   </div>
                 </div>
-
-
               `
   })
   dataContainer.innerHTML = result;
@@ -203,7 +201,4 @@ btnCap.addEventListener("click", onClickSortedCapital);
 btnPop.addEventListener("click", onClickSortedPopulation);
 popBtngraph.addEventListener("click", onClickPopGraph);
 langBtngraph.addEventListener("click", onClickLangGraph);
-
-
-
 
